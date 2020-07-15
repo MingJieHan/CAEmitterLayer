@@ -11,10 +11,22 @@
 @interface FireViewController (){
     CAEmitterLayer * fireLayer;
     CAEmitterLayer * smokeLayer;
+    float current_width;
+    UISlider *fire_height_slider;
 }
 @end
 
 @implementation FireViewController
+
+-(BOOL)shouldAutorotate{
+    if ([UIScreen mainScreen].bounds.size.width != current_width){
+        current_width = [UIScreen mainScreen].bounds.size.width;
+        smokeLayer.emitterPosition = CGPointMake(self.view.bounds.size.width * 0.5, self.view.bounds.size.height - 60);
+        fireLayer.emitterPosition = CGPointMake(self.view.bounds.size.width * 0.5, self.view.bounds.size.height - 60);
+    }
+    return YES;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,21 +34,43 @@
     self.view.backgroundColor = [UIColor blackColor];
 }
 
+-(void)fire_height_slider_changed:(id)sender{
+    [self setFireAndSmokeCount:2.f * fire_height_slider.value];
+    return;
+}
+
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     if (nil == fireLayer){
         [self setupEmitter];
     }
+    if (nil == fire_height_slider){
+        fire_height_slider = [[UISlider alloc] initWithFrame:CGRectMake(100.f, self.view.frame.size.height-80.f, self.view.frame.size.width-200.f, 20.f)];
+        fire_height_slider.minimumValue = 0.1f;
+        fire_height_slider.maximumValue = 1.f;
+        fire_height_slider.value = 0.2f;
+        [fire_height_slider addTarget:self action:@selector(fire_height_slider_changed:) forControlEvents:UIControlEventValueChanged];
+        fire_height_slider.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
+        [self.view addSubview:fire_height_slider];
+        
+        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(5.f, fire_height_slider.frame.origin.y, 90.f, 20)];
+        label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleRightMargin;
+        label.textColor = [UIColor whiteColor];
+        label.text = @"Small";
+        label.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:label];
+
+
+        UILabel * right_label = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width-95.f, fire_height_slider.frame.origin.y, 90.f, 20)];
+        right_label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin;
+        right_label.textColor = [UIColor whiteColor];
+        right_label.text = @"Large";
+        right_label.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:right_label];
+    }
 }
 
 - (void)setupEmitter{
-    
-    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 50)];
-    [self.view addSubview:label];
-    label.textColor = [UIColor whiteColor];
-    label.text = @"Drag for fire height.";
-    label.textAlignment = NSTextAlignmentCenter;
-    
     smokeLayer = [CAEmitterLayer layer];
     smokeLayer.renderMode = kCAEmitterLayerAdditive;
     smokeLayer.emitterMode = kCAEmitterLayerPoints;
@@ -97,34 +131,14 @@
     [self.view.layer addSublayer:fireLayer];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self setFireAndSmokeHight:event];
-}
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self setFireAndSmokeHight:event];
-}
-
-
-
-- (void)setFireAndSmokeHight:(UIEvent *)event{
-    UITouch * touch = [[event allTouches] anyObject];
-    CGPoint touchPoint = [touch locationInView:self.view];
-    
-    CGFloat distanceToBottom = self.view.bounds.size.height - touchPoint.y;
-    CGFloat per = distanceToBottom / self.view.bounds.size.height;
-    
-    [self setFireAndSmokeCount:2 * per];
-}
-
 - (void)setFireAndSmokeCount:(float)ratio{
-    
-    [fireLayer setValue:@(ratio * 500.0) forKeyPath:@"emitterCells.fireCell.birthRate"]; // 产生数量
+    [fireLayer setValue:@(ratio * 500.0) forKeyPath:@"emitterCells.fireCell.birthRate"];    // 产生数量
     [fireLayer setValue:[NSNumber numberWithFloat:ratio] forKeyPath:@"emitterCells.fireCell.lifetime"]; // 生命周期
     [fireLayer setValue:@(ratio * 0.35) forKeyPath:@"emitterCells.fireCell.lifetimeRange"]; // 生命周期变化范围
     [fireLayer setValue:[NSValue valueWithCGPoint:CGPointMake(ratio * 50, 0)] forKeyPath:@"emitterSize"]; // 发射源大小
     
-    [smokeLayer setValue:@(ratio * 4) forKeyPath:@"emitterCells.smokeCell.lifetime"]; // 生命周期
-    [smokeLayer setValue:(id)[[UIColor colorWithRed:1 green:1 blue:1 alpha:ratio * 0.3] CGColor] forKeyPath:@"emitterCells.smokeCell.color"]; // 透明度
+    [smokeLayer setValue:@(ratio * 4) forKeyPath:@"emitterCells.smokeCell.lifetime"];       // 生命周期
+    [smokeLayer setValue:(id)[[UIColor colorWithRed:1 green:1 blue:1 alpha:ratio * 0.3] CGColor] forKeyPath:@"emitterCells.smokeCell.color"];               // 透明度
     
 }
 

@@ -8,9 +8,15 @@
 
 #import "TableViewController.h"
 #import "FireViewController.h"
+#import "FireworksViewController.h"
+#import "LikeViewController.h"
 
 
 #define CELL_NAME_FIRE @"Fire"
+#define CELL_NAME_FIREWORKS @"Fireworks"
+#define CELL_NAME_Like_Button @"Like Button"
+
+
 @interface TableViewController (){
     
 }
@@ -22,11 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"CAEmitterLayer Demo";
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 
@@ -34,7 +35,10 @@
     switch (indexPath.row) {
         case 0:
             return CELL_NAME_FIRE;
-            break;
+        case 1:
+            return CELL_NAME_FIREWORKS;
+        case 2:
+            return CELL_NAME_Like_Button;
         default:
             break;
     }
@@ -48,7 +52,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 3;
 }
 
 
@@ -62,6 +66,12 @@
     if ([[self cell_identifier_stringFor:indexPath] isEqualToString:CELL_NAME_FIRE]){
         cell.textLabel.text = CELL_NAME_FIRE;
     }
+    if ([[self cell_identifier_stringFor:indexPath] isEqualToString:CELL_NAME_FIREWORKS]){
+        cell.textLabel.text = CELL_NAME_FIREWORKS;
+    }
+    if ([[self cell_identifier_stringFor:indexPath] isEqualToString:CELL_NAME_Like_Button]){
+        cell.textLabel.text = @"Like Button";
+    }
     return cell;
 }
 
@@ -72,6 +82,17 @@
         [self.navigationController pushViewController:view animated:YES];
         return;
     }
+    if ([[self cell_identifier_stringFor:indexPath] isEqualToString:CELL_NAME_FIREWORKS]){
+        FireworksViewController *view = [[FireworksViewController alloc] init];
+        [self.navigationController pushViewController:view animated:YES];
+        return;
+    }
+    if ([[self cell_identifier_stringFor:indexPath] isEqualToString:CELL_NAME_Like_Button]){
+        LikeViewController *view = [[LikeViewController alloc] init];
+        [self.navigationController pushViewController:view animated:YES];
+        return;
+    }
+
     return;
 }
 

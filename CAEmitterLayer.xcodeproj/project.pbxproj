@@ -14,6 +14,12 @@
 		EE0001EA24BE94B3002BF2EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0001E924BE94B3002BF2EE /* main.m */; };
 		EE0001F224BE9606002BF2EE /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0001F124BE9606002BF2EE /* TableViewController.m */; };
 		EE0001F524BE9775002BF2EE /* FireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0001F424BE9775002BF2EE /* FireViewController.m */; };
+		EE00020A24BEFA23002BF2EE /* UIMyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00020924BEFA23002BF2EE /* UIMyNavigationController.m */; };
+		EE00020D24BEFDBB002BF2EE /* FireworksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00020C24BEFDBB002BF2EE /* FireworksViewController.m */; };
+		EE00021024BF01EF002BF2EE /* LikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00020F24BF01EF002BF2EE /* LikeViewController.m */; };
+		EE00021324BFB7D9002BF2EE /* UILikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00021224BFB7D9002BF2EE /* UILikeButton.m */; };
+		EE00021524BFBA99002BF2EE /* UILikeButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE00021424BFBA99002BF2EE /* UILikeButton.bundle */; };
+		EE00021724BFBBC5002BF2EE /* LikeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE00021624BFBBC5002BF2EE /* LikeViewController.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,16 @@
 		EE0001F124BE9606002BF2EE /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		EE0001F324BE9775002BF2EE /* FireViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireViewController.h; sourceTree = "<group>"; };
 		EE0001F424BE9775002BF2EE /* FireViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireViewController.m; sourceTree = "<group>"; };
+		EE00020824BEFA23002BF2EE /* UIMyNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIMyNavigationController.h; sourceTree = "<group>"; };
+		EE00020924BEFA23002BF2EE /* UIMyNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIMyNavigationController.m; sourceTree = "<group>"; };
+		EE00020B24BEFDBB002BF2EE /* FireworksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireworksViewController.h; sourceTree = "<group>"; };
+		EE00020C24BEFDBB002BF2EE /* FireworksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireworksViewController.m; sourceTree = "<group>"; };
+		EE00020E24BF01EF002BF2EE /* LikeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LikeViewController.h; sourceTree = "<group>"; };
+		EE00020F24BF01EF002BF2EE /* LikeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LikeViewController.m; sourceTree = "<group>"; };
+		EE00021124BFB7D9002BF2EE /* UILikeButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILikeButton.h; sourceTree = "<group>"; };
+		EE00021224BFB7D9002BF2EE /* UILikeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILikeButton.m; sourceTree = "<group>"; };
+		EE00021424BFBA99002BF2EE /* UILikeButton.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UILikeButton.bundle; sourceTree = "<group>"; };
+		EE00021624BFBBC5002BF2EE /* LikeViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LikeViewController.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +79,15 @@
 			children = (
 				EE0001D724BE94B2002BF2EE /* AppDelegate.h */,
 				EE0001D824BE94B2002BF2EE /* AppDelegate.m */,
+				EE00020824BEFA23002BF2EE /* UIMyNavigationController.h */,
+				EE00020924BEFA23002BF2EE /* UIMyNavigationController.m */,
 				EE0001F024BE9606002BF2EE /* TableViewController.h */,
 				EE0001F124BE9606002BF2EE /* TableViewController.m */,
 				EE0001F324BE9775002BF2EE /* FireViewController.h */,
 				EE0001F424BE9775002BF2EE /* FireViewController.m */,
+				EE00020B24BEFDBB002BF2EE /* FireworksViewController.h */,
+				EE00020C24BEFDBB002BF2EE /* FireworksViewController.m */,
+				EE00021824BFBC7F002BF2EE /* LikeButton */,
 				EE0001E024BE94B2002BF2EE /* Main.storyboard */,
 				EE0001E324BE94B3002BF2EE /* Assets.xcassets */,
 				EE0001E524BE94B3002BF2EE /* LaunchScreen.storyboard */,
@@ -74,6 +95,19 @@
 				EE0001E924BE94B3002BF2EE /* main.m */,
 			);
 			path = CAEmitterLayer;
+			sourceTree = "<group>";
+		};
+		EE00021824BFBC7F002BF2EE /* LikeButton */ = {
+			isa = PBXGroup;
+			children = (
+				EE00020E24BF01EF002BF2EE /* LikeViewController.h */,
+				EE00020F24BF01EF002BF2EE /* LikeViewController.m */,
+				EE00021624BFBBC5002BF2EE /* LikeViewController.bundle */,
+				EE00021124BFB7D9002BF2EE /* UILikeButton.h */,
+				EE00021224BFB7D9002BF2EE /* UILikeButton.m */,
+				EE00021424BFBA99002BF2EE /* UILikeButton.bundle */,
+			);
+			path = LikeButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +169,8 @@
 			files = (
 				EE0001E724BE94B3002BF2EE /* LaunchScreen.storyboard in Resources */,
 				EE0001E424BE94B3002BF2EE /* Assets.xcassets in Resources */,
+				EE00021524BFBA99002BF2EE /* UILikeButton.bundle in Resources */,
+				EE00021724BFBBC5002BF2EE /* LikeViewController.bundle in Resources */,
 				EE0001E224BE94B2002BF2EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,8 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE00021324BFB7D9002BF2EE /* UILikeButton.m in Sources */,
+				EE00020A24BEFA23002BF2EE /* UIMyNavigationController.m in Sources */,
 				EE0001F524BE9775002BF2EE /* FireViewController.m in Sources */,
 				EE0001D924BE94B2002BF2EE /* AppDelegate.m in Sources */,
+				EE00021024BF01EF002BF2EE /* LikeViewController.m in Sources */,
+				EE00020D24BEFDBB002BF2EE /* FireworksViewController.m in Sources */,
 				EE0001EA24BE94B3002BF2EE /* main.m in Sources */,
 				EE0001F224BE9606002BF2EE /* TableViewController.m in Sources */,
 			);

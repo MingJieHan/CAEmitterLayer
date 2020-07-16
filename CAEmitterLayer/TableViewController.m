@@ -10,12 +10,12 @@
 #import "FireViewController.h"
 #import "FireworksViewController.h"
 #import "LikeViewController.h"
-
+#import "SnowViewController.h"
 
 #define CELL_NAME_FIRE @"Fire"
 #define CELL_NAME_FIREWORKS @"Fireworks"
 #define CELL_NAME_Like_Button @"Like Button"
-
+#define CELL_NAME_SNOW @"Snow"
 
 @interface TableViewController (){
     
@@ -39,6 +39,8 @@
             return CELL_NAME_FIREWORKS;
         case 2:
             return CELL_NAME_Like_Button;
+        case 3:
+            return CELL_NAME_SNOW;
         default:
             break;
     }
@@ -52,7 +54,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 
@@ -71,6 +73,9 @@
     }
     if ([[self cell_identifier_stringFor:indexPath] isEqualToString:CELL_NAME_Like_Button]){
         cell.textLabel.text = @"Like Button";
+    }
+    if ([[self cell_identifier_stringFor:indexPath] isEqualToString:CELL_NAME_SNOW]){
+        cell.textLabel.text = CELL_NAME_SNOW;
     }
     return cell;
 }
@@ -92,7 +97,10 @@
         [self.navigationController pushViewController:view animated:YES];
         return;
     }
-
+    if ([[self cell_identifier_stringFor:indexPath] isEqualToString:CELL_NAME_SNOW]){
+        SnowViewController *view = [[SnowViewController alloc] init];
+        [self.navigationController pushViewController:view animated:YES];
+    }
     return;
 }
 

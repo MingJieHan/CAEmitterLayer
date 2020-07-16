@@ -45,14 +45,15 @@
     fireworksLayer = [CAEmitterLayer layer];
     [self.view.layer addSublayer:fireworksLayer];
     
-    fireworksLayer.emitterPosition = CGPointMake(self.view.layer.bounds.size.width * 0.5, self.view.layer.bounds.size.height); // 在底部
-    fireworksLayer.emitterSize = CGSizeMake(self.view.layer.bounds.size.width * 0.1, 0.f);  // 宽度为一半
+    fireworksLayer.emitterPosition = CGPointMake(self.view.layer.bounds.size.width * 0.5, self.view.layer.bounds.size.height);
+    fireworksLayer.emitterSize = CGSizeMake(self.view.layer.bounds.size.width * 0.1, 0.f);
     fireworksLayer.emitterMode = kCAEmitterLayerOutline;
     fireworksLayer.emitterShape = kCAEmitterLayerLine;
     fireworksLayer.renderMode = kCAEmitterLayerAdditive;
     
     // 发射
     CAEmitterCell * shootCell = [CAEmitterCell emitterCell];
+    shootCell.contents = (id)[[UIImage imageNamed:@"shoot_white"] CGImage];
     shootCell.name = @"shootCell";
     
     shootCell.birthRate = 1.f;
@@ -62,14 +63,16 @@
     shootCell.velocityRange = 100.f;
     shootCell.yAcceleration = 75.f;     // 模拟重力影响
     
-    shootCell.emissionRange = M_PI * 0.25; //
+    //发射方向范围
+    shootCell.emissionRange = M_PI * 0.25;  //左右偏移角度
     
     shootCell.scale = 0.05;
+    
     shootCell.color = [[UIColor redColor] CGColor];
     shootCell.greenRange = 1.f;
     shootCell.redRange = 1.f;
     shootCell.blueRange = 1.f;
-    shootCell.contents = (id)[[UIImage imageNamed:@"shoot_white"] CGImage];
+    
     shootCell.spinRange = M_PI;  // 自转360度
     
     

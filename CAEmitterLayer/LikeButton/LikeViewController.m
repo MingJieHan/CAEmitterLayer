@@ -24,6 +24,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     btn = [UILikeButton buttonWithType:UIButtonTypeCustom];
+    btn.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
     btn.frame = CGRectMake(100, 100, 30, 130);
     [self.view addSubview:btn];
     UIImage *image = [[UIImage alloc] initWithContentsOfFile:[my_bundle pathForResource:@"dislike" ofType:@"png"]];
@@ -33,9 +34,9 @@
     [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
+-(void)viewWillAppear:(BOOL)animated{
     btn.center = self.view.center;
+    [super viewWillAppear:animated];
 }
 
 - (void)btnClick:(UIButton *)button{

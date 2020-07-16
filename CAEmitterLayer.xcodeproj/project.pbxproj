@@ -20,6 +20,8 @@
 		EE00021324BFB7D9002BF2EE /* UILikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00021224BFB7D9002BF2EE /* UILikeButton.m */; };
 		EE00021524BFBA99002BF2EE /* UILikeButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE00021424BFBA99002BF2EE /* UILikeButton.bundle */; };
 		EE00021724BFBBC5002BF2EE /* LikeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE00021624BFBBC5002BF2EE /* LikeViewController.bundle */; };
+		EE00021B24C02D94002BF2EE /* SnowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00021A24C02D94002BF2EE /* SnowViewController.m */; };
+		EE00021D24C02DA1002BF2EE /* SnowViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE00021C24C02DA1002BF2EE /* SnowViewController.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,9 @@
 		EE00021224BFB7D9002BF2EE /* UILikeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILikeButton.m; sourceTree = "<group>"; };
 		EE00021424BFBA99002BF2EE /* UILikeButton.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UILikeButton.bundle; sourceTree = "<group>"; };
 		EE00021624BFBBC5002BF2EE /* LikeViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LikeViewController.bundle; sourceTree = "<group>"; };
+		EE00021924C02D94002BF2EE /* SnowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowViewController.h; sourceTree = "<group>"; };
+		EE00021A24C02D94002BF2EE /* SnowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnowViewController.m; sourceTree = "<group>"; };
+		EE00021C24C02DA1002BF2EE /* SnowViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SnowViewController.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,9 @@
 				EE0001F424BE9775002BF2EE /* FireViewController.m */,
 				EE00020B24BEFDBB002BF2EE /* FireworksViewController.h */,
 				EE00020C24BEFDBB002BF2EE /* FireworksViewController.m */,
+				EE00021924C02D94002BF2EE /* SnowViewController.h */,
+				EE00021A24C02D94002BF2EE /* SnowViewController.m */,
+				EE00021C24C02DA1002BF2EE /* SnowViewController.bundle */,
 				EE00021824BFBC7F002BF2EE /* LikeButton */,
 				EE0001E024BE94B2002BF2EE /* Main.storyboard */,
 				EE0001E324BE94B3002BF2EE /* Assets.xcassets */,
@@ -168,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE0001E724BE94B3002BF2EE /* LaunchScreen.storyboard in Resources */,
+				EE00021D24C02DA1002BF2EE /* SnowViewController.bundle in Resources */,
 				EE0001E424BE94B3002BF2EE /* Assets.xcassets in Resources */,
 				EE00021524BFBA99002BF2EE /* UILikeButton.bundle in Resources */,
 				EE00021724BFBBC5002BF2EE /* LikeViewController.bundle in Resources */,
@@ -183,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE00021324BFB7D9002BF2EE /* UILikeButton.m in Sources */,
+				EE00021B24C02D94002BF2EE /* SnowViewController.m in Sources */,
 				EE00020A24BEFA23002BF2EE /* UIMyNavigationController.m in Sources */,
 				EE0001F524BE9775002BF2EE /* FireViewController.m in Sources */,
 				EE0001D924BE94B2002BF2EE /* AppDelegate.m in Sources */,

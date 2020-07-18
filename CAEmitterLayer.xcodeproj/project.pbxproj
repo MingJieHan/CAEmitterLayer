@@ -22,6 +22,8 @@
 		EE00021724BFBBC5002BF2EE /* LikeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE00021624BFBBC5002BF2EE /* LikeViewController.bundle */; };
 		EE00021B24C02D94002BF2EE /* SnowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00021A24C02D94002BF2EE /* SnowViewController.m */; };
 		EE00021D24C02DA1002BF2EE /* SnowViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE00021C24C02DA1002BF2EE /* SnowViewController.bundle */; };
+		EE00022024C07634002BF2EE /* FireworksSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00021F24C07634002BF2EE /* FireworksSettingsView.m */; };
+		EE71884124C195E3008666F7 /* UISnowSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71884024C195E3008666F7 /* UISnowSettingsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,10 @@
 		EE00021924C02D94002BF2EE /* SnowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowViewController.h; sourceTree = "<group>"; };
 		EE00021A24C02D94002BF2EE /* SnowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnowViewController.m; sourceTree = "<group>"; };
 		EE00021C24C02DA1002BF2EE /* SnowViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SnowViewController.bundle; sourceTree = "<group>"; };
+		EE00021E24C07634002BF2EE /* FireworksSettingsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireworksSettingsView.h; sourceTree = "<group>"; };
+		EE00021F24C07634002BF2EE /* FireworksSettingsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireworksSettingsView.m; sourceTree = "<group>"; };
+		EE71883F24C195E3008666F7 /* UISnowSettingsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UISnowSettingsView.h; sourceTree = "<group>"; };
+		EE71884024C195E3008666F7 /* UISnowSettingsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISnowSettingsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +98,12 @@
 				EE0001F424BE9775002BF2EE /* FireViewController.m */,
 				EE00020B24BEFDBB002BF2EE /* FireworksViewController.h */,
 				EE00020C24BEFDBB002BF2EE /* FireworksViewController.m */,
+				EE00021E24C07634002BF2EE /* FireworksSettingsView.h */,
+				EE00021F24C07634002BF2EE /* FireworksSettingsView.m */,
 				EE00021924C02D94002BF2EE /* SnowViewController.h */,
 				EE00021A24C02D94002BF2EE /* SnowViewController.m */,
+				EE71883F24C195E3008666F7 /* UISnowSettingsView.h */,
+				EE71884024C195E3008666F7 /* UISnowSettingsView.m */,
 				EE00021C24C02DA1002BF2EE /* SnowViewController.bundle */,
 				EE00021824BFBC7F002BF2EE /* LikeButton */,
 				EE0001E024BE94B2002BF2EE /* Main.storyboard */,
@@ -191,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE00022024C07634002BF2EE /* FireworksSettingsView.m in Sources */,
 				EE00021324BFB7D9002BF2EE /* UILikeButton.m in Sources */,
 				EE00021B24C02D94002BF2EE /* SnowViewController.m in Sources */,
 				EE00020A24BEFA23002BF2EE /* UIMyNavigationController.m in Sources */,
@@ -199,6 +210,7 @@
 				EE00021024BF01EF002BF2EE /* LikeViewController.m in Sources */,
 				EE00020D24BEFDBB002BF2EE /* FireworksViewController.m in Sources */,
 				EE0001EA24BE94B3002BF2EE /* main.m in Sources */,
+				EE71884124C195E3008666F7 /* UISnowSettingsView.m in Sources */,
 				EE0001F224BE9606002BF2EE /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +354,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KM9DQ5C6Z;
 				INFOPLIST_FILE = CAEmitterLayer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,7 +372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KM9DQ5C6Z;
 				INFOPLIST_FILE = CAEmitterLayer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -7,20 +7,29 @@
 //
 
 #import "FireworksViewController.h"
-
+#import "FireworksSettingsView.h"
 @interface FireworksViewController (){
     CAEmitterLayer * fireworksLayer;
     float current_width;
+    FireworksSettingsView *settings_view;
 }
 
 @end
 
 @implementation FireworksViewController
+-(void)settings:(id)sender{
+    if (nil == settings_view){
+        settings_view = [[FireworksSettingsView alloc] initWithFrame:CGRectMake(0.f, 0.f, 300.f, 400.f)];
+    }
+    [self.view addSubview:settings_view];
+    return;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Fireworks";
     self.view.backgroundColor = [UIColor blackColor];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(settings:)];
 }
 
 -(void)viewDidAppear:(BOOL)animated{

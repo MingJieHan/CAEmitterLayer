@@ -41,5 +41,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Save record video into photos.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Save record video into photos.</string>
+                 
 </dict>
 </plist>

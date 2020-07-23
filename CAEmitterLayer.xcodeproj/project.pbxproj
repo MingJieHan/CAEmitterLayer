@@ -24,6 +24,8 @@
 		EE00021D24C02DA1002BF2EE /* SnowViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE00021C24C02DA1002BF2EE /* SnowViewController.bundle */; };
 		EE00022024C07634002BF2EE /* FireworksSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00021F24C07634002BF2EE /* FireworksSettingsView.m */; };
 		EE71884124C195E3008666F7 /* UISnowSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71884024C195E3008666F7 /* UISnowSettingsView.m */; };
+		EE7188D324C9B5DE008666F7 /* UISmallBallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7188D224C9B5DE008666F7 /* UISmallBallViewController.m */; };
+		EE7188D524C9B671008666F7 /* UISmallBallViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE7188D424C9B671008666F7 /* UISmallBallViewController.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,9 @@
 		EE00021F24C07634002BF2EE /* FireworksSettingsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireworksSettingsView.m; sourceTree = "<group>"; };
 		EE71883F24C195E3008666F7 /* UISnowSettingsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UISnowSettingsView.h; sourceTree = "<group>"; };
 		EE71884024C195E3008666F7 /* UISnowSettingsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISnowSettingsView.m; sourceTree = "<group>"; };
+		EE7188D124C9B5DE008666F7 /* UISmallBallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UISmallBallViewController.h; sourceTree = "<group>"; };
+		EE7188D224C9B5DE008666F7 /* UISmallBallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISmallBallViewController.m; sourceTree = "<group>"; };
+		EE7188D424C9B671008666F7 /* UISmallBallViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UISmallBallViewController.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,9 @@
 				EE71883F24C195E3008666F7 /* UISnowSettingsView.h */,
 				EE71884024C195E3008666F7 /* UISnowSettingsView.m */,
 				EE00021C24C02DA1002BF2EE /* SnowViewController.bundle */,
+				EE7188D124C9B5DE008666F7 /* UISmallBallViewController.h */,
+				EE7188D224C9B5DE008666F7 /* UISmallBallViewController.m */,
+				EE7188D424C9B671008666F7 /* UISmallBallViewController.bundle */,
 				EE00021824BFBC7F002BF2EE /* LikeButton */,
 				EE0001E024BE94B2002BF2EE /* Main.storyboard */,
 				EE0001E324BE94B3002BF2EE /* Assets.xcassets */,
@@ -186,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE0001E724BE94B3002BF2EE /* LaunchScreen.storyboard in Resources */,
+				EE7188D524C9B671008666F7 /* UISmallBallViewController.bundle in Resources */,
 				EE00021D24C02DA1002BF2EE /* SnowViewController.bundle in Resources */,
 				EE0001E424BE94B3002BF2EE /* Assets.xcassets in Resources */,
 				EE00021524BFBA99002BF2EE /* UILikeButton.bundle in Resources */,
@@ -204,6 +213,7 @@
 				EE00022024C07634002BF2EE /* FireworksSettingsView.m in Sources */,
 				EE00021324BFB7D9002BF2EE /* UILikeButton.m in Sources */,
 				EE00021B24C02D94002BF2EE /* SnowViewController.m in Sources */,
+				EE7188D324C9B5DE008666F7 /* UISmallBallViewController.m in Sources */,
 				EE00020A24BEFA23002BF2EE /* UIMyNavigationController.m in Sources */,
 				EE0001F524BE9775002BF2EE /* FireViewController.m in Sources */,
 				EE0001D924BE94B2002BF2EE /* AppDelegate.m in Sources */,

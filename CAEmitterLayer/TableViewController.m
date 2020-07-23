@@ -11,11 +11,14 @@
 #import "FireworksViewController.h"
 #import "LikeViewController.h"
 #import "SnowViewController.h"
+#import "UISmallBallViewController.h"
+
 
 #define CELL_NAME_FIRE @"Fire"
 #define CELL_NAME_FIREWORKS @"Fireworks"
 #define CELL_NAME_Like_Button @"Like Button"
 #define CELL_NAME_SNOW @"Snow"
+#define CELL_NAME_BALL @"Small Balls"
 
 @interface TableViewController (){
     
@@ -41,6 +44,8 @@
             return CELL_NAME_Like_Button;
         case 3:
             return CELL_NAME_SNOW;
+        case 4:
+            return CELL_NAME_BALL;
         default:
             break;
     }
@@ -54,7 +59,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 5;
 }
 
 
@@ -76,6 +81,9 @@
     }
     if ([[self cell_identifier_stringFor:indexPath] isEqualToString:CELL_NAME_SNOW]){
         cell.textLabel.text = CELL_NAME_SNOW;
+    }
+    if ([[self cell_identifier_stringFor:indexPath] isEqualToString:CELL_NAME_BALL]){
+        cell.textLabel.text = CELL_NAME_BALL;
     }
     return cell;
 }
@@ -99,6 +107,10 @@
     }
     if ([[self cell_identifier_stringFor:indexPath] isEqualToString:CELL_NAME_SNOW]){
         SnowViewController *view = [[SnowViewController alloc] init];
+        [self.navigationController pushViewController:view animated:YES];
+    }
+    if ([[self cell_identifier_stringFor:indexPath] isEqualToString:CELL_NAME_BALL]){
+        UISmallBallViewController *view = [[UISmallBallViewController alloc] init];
         [self.navigationController pushViewController:view animated:YES];
     }
     return;
